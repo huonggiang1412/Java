@@ -12,7 +12,7 @@ public class SinhVienController {
 	
 	public SinhVienController() {
         quanLyMuonTra = new QuanLyMuonTra();
-        dstm = quanLyMuonTra.getDanhSachTheMuon(); // Khởi tạo dstm từ danh sách trong quản lý mượn trả
+        dstm = quanLyMuonTra.getDanhSachTheMuon();
     }
 
 	public QuanLyMuonTra getQuanLyMuonTra() {
@@ -46,12 +46,12 @@ public class SinhVienController {
         int hanTra = scanner.nextInt();
         System.out.print("Nhập số hiệu sách: ");
         int soHieuSach = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
         System.out.print("Nhập họ và tên sinh viên: ");
         String hoTen = scanner.nextLine();
         System.out.print("Nhập tuổi sinh viên: ");
         int tuoi = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine(); 
         System.out.print("Nhập lớp sinh viên: ");
         String lop = scanner.nextLine();
         SinhVien sinhVien = new SinhVien(hoTen, tuoi, lop);
@@ -79,10 +79,10 @@ public class SinhVienController {
     }
     public void TestDocFile() {
     dstm = IOStream.docFile("D:\\QLSV.txt");
-	System.out.println("Danh sách khách hàng nạp vào máy tính là:");
-	System.out.println("Mã\tTên\tTên\tTên\tTên\tTên\tTên");
-	for (TheMuon khachHang : dstm) {
-		System.out.println(khachHang);
+	System.out.println("Danh sách sinh viên nạp vào máy tính là:");
+	System.out.println("Mã\tNgày mượn\tHạn trả\tHiệu sách\tTên\tTuổi\tLớp");
+	for (TheMuon themuon : dstm) {
+		System.out.println(themuon);
 	}
 }
 }

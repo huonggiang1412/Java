@@ -59,7 +59,7 @@ public class TheMuon implements Serializable {
 
 	@Override
 	public String toString() {
-		return this.maPhieuMuon +"\t"+this.ngayMuon+"\t"+this.hanTra+"\t"+this.soHieuSach+"\t"+sinhVienMuon;
+		return this.maPhieuMuon +"\t"+this.ngayMuon+"\t\t"+this.hanTra+"\t"+this.soHieuSach+"\t\t"+sinhVienMuon;
 	}
 	
     
